@@ -235,17 +235,18 @@ return {
                                     done = { icon = "✓⃝" },
                                     pending = { icon = "⏱︎" },
                                 },
+                                heading = {
+                                    icons = {"◉", "◎", "○", "▶", "▷", "⤷"}
+                                }
                             },
                         },
-                    }, -- Adds pretty icons to your documents
+                    },
                     ["core.completion"] = {
                         config = {
                             engine = "nvim-cmp"
                         }
                     },
-                    -- ["core.integration.nvim-cmp"] = {},
-                    -- ["core.integration.treesitter"] = {},
-                    -- ["core.completion"] = {},
+                    ["core.export"] = {},
                     ["core.keybinds"] = {
                         config = {
                             hook = function(keybinds)
@@ -253,7 +254,7 @@ return {
                             end
                         }
                     },
-                    ["core.dirman"] = { -- Manages Neorg workspaces
+                    ["core.dirman"] = {
                         config = {
                             workspaces = {
                                 notes = "~/notes",
