@@ -381,6 +381,7 @@ return {
                     comparators = {
                         cmp.config.compare.offset,
                         cmp.config.compare.exact,
+                        cmp.config.compare.score,
                         cmp.config.compare.recently_used,
                         require("clangd_extensions.cmp_scores"),
                         cmp.config.compare.kind,
@@ -400,18 +401,18 @@ return {
                 sources = cmp.config.sources(
                     {
                         { name = 'nvim_lsp' },
-                        { name = 'neorg' },
-                        { name = 'luasnip' }, -- For luasnip users.
-                        { name = 'path', option = {
-                            trailing_slash = true,
-                            label_trailing_slash = true
-                        } },
-                        { name = 'calc' },
                         { name = 'nvim_lsp_signature_help' },
+                        { name = 'neorg' },
+                        { name = 'luasnip' },
+                        { name = 'calc' },
                         { name = 'cmp_yanky' }
                     },
                     {
                         { name = 'buffer' },
+                        { name = 'path', option = {
+                            trailing_slash = true,
+                            label_trailing_slash = true
+                        } },
                     })
             })
             -- Set configuration for specific filetype.
